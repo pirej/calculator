@@ -17,6 +17,7 @@ const Stanje = styled.div`
     }
     input {
       width: 40%;
+      border: none;
       border-radius: 5px;
       height: 2rem;
       font-size: 1.2rem;

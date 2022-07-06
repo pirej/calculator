@@ -14,6 +14,20 @@ const StyledComp = styled.div`
     font-size: 1.2rem;
     margin-top: 0;
   }
+  .btn {
+    button {
+      background-color: #5cd6b1;
+      color: #082f45;
+      padding: 0.3rem 1rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      :hover {
+        background-color: #28bd91;
+      }
+    }
+  }
   .potrosuvacka {
     display: flex;
     justify-content: space-evenly;
@@ -42,6 +56,9 @@ const StyledComp = styled.div`
 const Matematika = () => {
   return (
     <StyledComp>
+      <div className="btn">
+        <button>Пресметај</button>
+      </div>
       <h3>
         Потрошено за <span>26</span> дена
       </h3>
