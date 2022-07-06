@@ -4,7 +4,6 @@ import Matematika from './Matematika';
 import Sostojba from './Sostojba';
 
 const MyForm = styled.div`
-  background-color: #435f70;
   background-color: #314b59;
   width: 40vw;
   height: 91vh;
@@ -15,6 +14,7 @@ const MyForm = styled.div`
     margin: 0;
     padding: 1rem 0 0.9rem 0;
     font-size: 1.6rem;
+    letter-spacing: 0.05rem;
   }
   .sostojba {
     display: flex;
