@@ -4,8 +4,8 @@ import styled from 'styled-components';
 const StyledComp = styled.div`
   h3 {
     font-size: 1.4rem;
-    margin-top: 1rem;
-    margin-bottom: 0rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
     span {
       color: #d77578;
     }
@@ -15,9 +15,9 @@ const StyledComp = styled.div`
     margin-top: 0;
   }
   .btn {
+    margin-top: 1rem;
     button {
-      background-color: #28bd91;
-      color: #435f70;
+      background-color: #39bd96;
       color: #354c59;
       padding: 0.3rem 1rem;
       font-size: 1.2rem;
@@ -27,7 +27,7 @@ const StyledComp = styled.div`
       letter-spacing: 0.04rem;
       font-weight: bolder;
       :hover {
-        background-color: #179972;
+        background-color: #29a680;
       }
       box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.9);
       -webkit-box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.9);
@@ -42,7 +42,7 @@ const StyledComp = styled.div`
       flex-direction: column;
       width: 16%;
       .topP {
-        margin-bottom: 0.2rem;
+        margin-bottom: 0;
         font-weight: 600;
       }
       .botP {
@@ -52,7 +52,6 @@ const StyledComp = styled.div`
         color: #70c2a9;
       }
       .skp {
-        color: #fc787d;
         color: #d77578;
       }
     }
@@ -78,6 +77,7 @@ const Matematika = () => {
           <p className="botP ">356565 kw/h</p>
         </div>
       </div>
+      <hr />
     </StyledComp>
   );
 };

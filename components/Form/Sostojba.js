@@ -12,6 +12,9 @@ const Stanje = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    label {
+      margin-bottom: 0.3rem;
+    }
   }
 
   /* ---------------------------- */
@@ -33,7 +36,6 @@ const Stanje = styled.div`
     }
 
     label {
-      margin-bottom: 0.2rem;
       font-weight: 500;
     }
 
@@ -65,9 +67,6 @@ const Stanje = styled.div`
       flex-direction: column;
       width: 35%;
 
-      label {
-        margin-bottom: 2.2rem;
-      }
       input {
         width: 100%;
         border-radius: 5px;
@@ -75,9 +74,9 @@ const Stanje = styled.div`
         font-size: 1.2rem;
         background-color: #c2ced6;
         color: #082f45;
+        margin-top: 0.3rem;
       }
       .evt {
-        color: #5cd6b1;
         color: #70c2a9;
         font-weight: 500;
       }
