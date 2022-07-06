@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const MyNav = styled.div`
   background-color: #1f3947;
-  height: 30vh;
+  height: 40vh;
   text-align: center;
   h1 {
     font-size: 4rem;
@@ -15,11 +15,7 @@ const MyNav = styled.div`
 `;
 
 const Nav = () => {
-  return (
-    <MyNav>
-      <h1>ДЕСЕТОК</h1>
-    </MyNav>
-  );
+  return <MyNav>{/* <h1>ДЕСЕТОК</h1> */}</MyNav>;
 };
 
 export default Nav;
