@@ -13,6 +13,9 @@ const MyForm = styled.div`
   @media (max-width: 1600px) {
     height: 108vh;
   }
+  @media (max-width: 1200px) {
+    width: 55vw;
+  }
 
   h2 {
     margin: 0;
