@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import Form from '../components/Form';
 import Nav from '../components/Nav';
 
 export default function Home() {
   return (
     <div>
       <Nav />
-      <h2>Калкулатор на сметки за струја</h2>
+      <Form />
     </div>
   );
 }

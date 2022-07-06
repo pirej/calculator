@@ -6,7 +6,6 @@ const MyNav = styled.div`
   height: 30vh;
   text-align: center;
   h1 {
-    color: white;
     font-size: 4rem;
     margin-top: 0;
     padding-top: 2rem;
