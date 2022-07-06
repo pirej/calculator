@@ -59,10 +59,10 @@ const StyledComp = styled.div`
   }
   .hrr {
     margin-top: 0.2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
   }
   .hrr2 {
-    margin-top: 1rem;
+    margin-top: 1.2rem;
     /* margin-bottom: 0.5rem; */
   }
   .blokovi {
@@ -82,6 +82,23 @@ const StyledComp = styled.div`
     }
   }
   .total {
+    p {
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+    .cheap {
+      color: #39bd96;
+    }
+    .skapa {
+      color: #d77578;
+    }
+    .taksa {
+      color: #63abff;
+    }
+  }
+  .hrr3 {
+    margin-top: 1.4rem;
+    margin-bottom: 1.5rem;
   }
   .vkupno {
     /* border: solid 3px #406780; */
@@ -121,15 +138,9 @@ const Matematika = () => {
       </div>
       <hr className="hrr2" />
       <div className="total">
-        <p>
-          Евтина струја <span>255 денари</span>
-        </p>
-        <p>
-          Скапа струја <span>255 денари</span>
-        </p>
-        <p>
-          Комунална такса <span>255 денари</span>
-        </p>
+        <p className="cheap">Евтина струја 255 денари</p>
+        <p className="skapa">Скапа струја 255 денари</p>
+        <p className="taksa">Комунална такса 184 денари</p>
         <hr className="hrr3" />
         <h3 className="vkupno">
           Вкупно <span>255 денари</span>

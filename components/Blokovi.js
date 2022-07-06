@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Blocks = styled.div`
   h4 {
-    margin: 0.5rem;
+    margin: 0.2rem;
     font-size: 1.2rem;
   }
 `;

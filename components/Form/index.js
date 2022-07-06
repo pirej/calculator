@@ -7,9 +7,9 @@ const MyForm = styled.div`
   background-color: #435f70;
   background-color: #314b59;
   width: 40vw;
-  height: 100vh;
+  height: 90vh;
   margin: -7rem auto 0 auto;
-  border-radius: 3%;
+  border-radius: 15px;
   text-align: center;
   h2 {
     margin: 0;
