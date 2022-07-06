@@ -7,6 +7,9 @@ const Stanje = styled.div`
     font-size: 1.4rem;
     margin-top: 0rem;
     margin-bottom: 0.5rem;
+    @media (max-width: 1600px) {
+      font-size: 1.3rem;
+    }
   }
   .oneField {
     display: flex;
@@ -15,11 +18,17 @@ const Stanje = styled.div`
     label {
       margin-bottom: 0.3rem;
     }
+    @media (max-width: 1600px) {
+      margin-bottom: 0.5rem;
+    }
   }
 
   /* ---------------------------- */
   p {
     font-size: 1.2rem;
+    @media (max-width: 1600px) {
+      font-size: 1.1rem;
+    }
     margin-top: 0;
 
     input:-webkit-autofill,
@@ -62,10 +71,11 @@ const Stanje = styled.div`
   .potrosuvacka {
     display: flex;
     justify-content: space-evenly;
+
     .kwh {
       display: flex;
       flex-direction: column;
-      width: 35%;
+      width: 45%;
 
       input {
         width: 100%;
@@ -75,6 +85,9 @@ const Stanje = styled.div`
         background-color: #c2ced6;
         color: #082f45;
         margin-top: 0.3rem;
+        @media (max-width: 1600px) {
+          font-size: 1.1rem;
+        }
       }
       .evt {
         color: #39bd96;

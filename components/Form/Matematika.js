@@ -10,10 +10,17 @@ const StyledComp = styled.div`
     span {
       color: #d77578;
     }
+    @media (max-width: 1600px) {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
   }
   p {
     font-size: 1.2rem;
     margin-top: 0;
+    @media (max-width: 1600px) {
+      font-size: 1.1rem;
+    }
   }
   .btn {
     margin-top: 1.5rem;
@@ -27,6 +34,9 @@ const StyledComp = styled.div`
       cursor: pointer;
       letter-spacing: 0.04rem;
       font-weight: bolder;
+      @media (max-width: 1600px) {
+        font-size: 1.1rem;
+      }
       :hover {
         background-color: #29a680;
       }
@@ -41,7 +51,10 @@ const StyledComp = styled.div`
     .kwh {
       display: flex;
       flex-direction: column;
-      width: 16%;
+      width: 20%;
+      @media (max-width: 1600px) {
+        width: 30%;
+      }
       .topP {
         margin-bottom: 0;
         font-weight: 600;

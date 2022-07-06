@@ -5,6 +5,9 @@ const Blocks = styled.div`
   h4 {
     margin: 0.2rem;
     font-size: 1.2rem;
+    @media (max-width: 1600px) {
+      font-size: 1.1rem;
+    }
   }
 `;
 
