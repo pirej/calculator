@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const MyNav = styled.div`
-  background-color: #0e415e;
+  background-color: #1f3947;
   height: 30vh;
   text-align: center;
   h1 {
@@ -10,6 +10,7 @@ const MyNav = styled.div`
     margin-top: 0;
     padding-top: 2rem;
     letter-spacing: 0.3rem;
+    color: #a3c7d9;
   }
 `;
 
