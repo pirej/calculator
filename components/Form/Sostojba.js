@@ -12,24 +12,51 @@ const Stanje = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    label {
-      margin-bottom: 0.2rem;
-    }
-    input {
-      width: 40%;
-      border: none;
-      border-radius: 5px;
-      height: 2rem;
-      font-size: 1.2rem;
-      background-color: #c2ced6;
-      color: #082f45;
-    }
   }
 
+  /* ---------------------------- */
   p {
     font-size: 1.2rem;
     margin-top: 0;
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      -webkit-text-fill-color: #082f45;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+
+    label {
+      margin-bottom: 0.2rem;
+      font-weight: 500;
+    }
+
+    input {
+      width: 40%;
+      height: 2rem;
+      color: #082f45;
+      background-color: #c2ced6;
+      border-radius: 5px;
+      border: solid 1px #1f3947;
+      letter-spacing: 0.04rem;
+      font-size: 1rem;
+
+      :focus {
+        outline: none !important;
+        border: 1px solid #082f45;
+        box-shadow: 0px 4px 7px -2px rgba(46, 65, 76, 0.9);
+        -webkit-box-shadow: 0px 4px 7px -2px rgba(46, 65, 76, 0.9);
+        -moz-box-shadow: 0px 4px 7px -2px rgba(46, 65, 76, 0.9);
+      }
+    }
   }
+  /* ---------------------------- */
   .potrosuvacka {
     display: flex;
     justify-content: space-evenly;
@@ -39,7 +66,7 @@ const Stanje = styled.div`
       width: 35%;
 
       label {
-        margin-bottom: 0.2rem;
+        margin-bottom: 2.2rem;
       }
       input {
         width: 100%;
@@ -52,12 +79,11 @@ const Stanje = styled.div`
       .evt {
         color: #5cd6b1;
         color: #70c2a9;
-        font-weight: 600;
+        font-weight: 500;
       }
       .skp {
-        /* color: #fc787d; */
         color: #d77578;
-        font-weight: 600;
+        font-weight: 500;
       }
     }
   }

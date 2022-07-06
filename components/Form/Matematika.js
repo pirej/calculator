@@ -16,16 +16,22 @@ const StyledComp = styled.div`
   }
   .btn {
     button {
-      background-color: #5cd6b1;
-      color: #082f45;
+      background-color: #28bd91;
+      color: #435f70;
+      color: #354c59;
       padding: 0.3rem 1rem;
       font-size: 1.2rem;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      letter-spacing: 0.04rem;
+      font-weight: bolder;
       :hover {
-        background-color: #28bd91;
+        background-color: #179972;
       }
+      box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.9);
+      -webkit-box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.9);
+      -moz-box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.9);
     }
   }
   .potrosuvacka {
