@@ -13,6 +13,7 @@ const MyForm = styled.div`
   @media (max-width: 1600px) {
     height: 108vh;
   }
+
   h2 {
     margin: 0;
     padding: 1rem 0 0.9rem 0;
@@ -20,6 +21,9 @@ const MyForm = styled.div`
     letter-spacing: 0.05rem;
     @media (max-width: 1600px) {
       font-size: 1.4rem;
+    }
+    @media (max-width: 1400px) {
+      font-size: 1.3rem;
     }
     /* @media (max-width: 1440px) {
       font-size: 1.3rem;
@@ -35,6 +39,10 @@ const MyForm = styled.div`
     background: #406780;
     width: 80%;
     margin-bottom: 1rem;
+    @media (max-width: 1400px) {
+      margin-bottom: 0.5rem;
+      margin-top: 0rem;
+    }
   }
 `;
 

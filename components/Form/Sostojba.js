@@ -10,6 +10,9 @@ const Stanje = styled.div`
     @media (max-width: 1600px) {
       font-size: 1.3rem;
     }
+    @media (max-width: 1400px) {
+      font-size: 1.2rem;
+    }
   }
   .oneField {
     display: flex;
@@ -28,6 +31,9 @@ const Stanje = styled.div`
     font-size: 1.2rem;
     @media (max-width: 1600px) {
       font-size: 1.1rem;
+    }
+    @media (max-width: 1400px) {
+      font-size: 1.05rem;
     }
     margin-top: 0;
 
@@ -87,6 +93,9 @@ const Stanje = styled.div`
         margin-top: 0.3rem;
         @media (max-width: 1600px) {
           font-size: 1.1rem;
+        }
+        @media (max-width: 1400px) {
+          font-size: 1.05rem;
         }
       }
       .evt {

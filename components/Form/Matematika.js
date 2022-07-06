@@ -14,6 +14,11 @@ const StyledComp = styled.div`
       font-size: 1.3rem;
       margin-bottom: 0.5rem;
     }
+    @media (max-width: 1400px) {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.2rem;
+    }
   }
   p {
     font-size: 1.2rem;
@@ -24,6 +29,9 @@ const StyledComp = styled.div`
   }
   .btn {
     margin-top: 1.5rem;
+    @media (max-width: 1400px) {
+      margin-top: 1rem;
+    }
     button {
       background-color: #39bd96;
       color: #354c59;
@@ -36,6 +44,9 @@ const StyledComp = styled.div`
       font-weight: bolder;
       @media (max-width: 1600px) {
         font-size: 1.1rem;
+      }
+      @media (max-width: 1400px) {
+        font-size: 1.05rem;
       }
       :hover {
         background-color: #29a680;
@@ -73,10 +84,18 @@ const StyledComp = styled.div`
   .hrr {
     margin-top: 0.2rem;
     margin-bottom: 0.8rem;
+    @media (max-width: 1400px) {
+      margin-top: 0rem;
+      margin-bottom: 0.3rem;
+    }
   }
   .hrr2 {
     margin-top: 1.2rem;
     /* margin-bottom: 0.5rem; */
+    @media (max-width: 1400px) {
+      margin-top: 0.9rem;
+      margin-bottom: 0.7rem;
+    }
   }
   .blokovi {
     display: flex;
@@ -110,8 +129,12 @@ const StyledComp = styled.div`
     }
   }
   .hrr3 {
-    margin-top: 1.4rem;
-    margin-bottom: 1.5rem;
+    margin-top: 1.3rem;
+    margin-bottom: 1.4rem;
+    @media (max-width: 1400px) {
+      margin-top: 1rem;
+      margin-bottom: 1.05rem;
+    }
   }
   .vkupno {
     /* border: solid 3px #406780; */
