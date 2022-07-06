@@ -77,7 +77,7 @@ const Stanje = styled.div`
         margin-top: 0.3rem;
       }
       .evt {
-        color: #70c2a9;
+        color: #39bd96;
         font-weight: 500;
       }
       .skp {

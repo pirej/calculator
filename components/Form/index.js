@@ -13,8 +13,8 @@ const MyForm = styled.div`
   text-align: center;
   h2 {
     margin: 0;
-    padding: 2.2rem 0 2rem 0;
-    font-size: 1.8rem;
+    padding: 1rem 0 0.9rem 0;
+    font-size: 1.6rem;
   }
   .sostojba {
     display: flex;
@@ -23,10 +23,9 @@ const MyForm = styled.div`
   hr {
     border: 0;
     height: 1px;
-    background: #4d7b99;
     background: #406780;
     width: 80%;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1rem;
   }
 `;
 

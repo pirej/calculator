@@ -23,6 +23,7 @@ const Blokovi = ({ block, spent }) => {
     >
       <h4>BT{block}</h4>
       <h4>255 kw/h</h4>
+      <h4>865 ден.</h4>
     </Blocks>
   );
 };
