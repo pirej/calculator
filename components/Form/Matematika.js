@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Blokovi from '../Blokovi';
 
 const StyledComp = styled.div`
   h3 {
@@ -56,6 +57,22 @@ const StyledComp = styled.div`
       }
     }
   }
+  .blokovi {
+    display: flex;
+    justify-content: space-evenly;
+    .one {
+      color: #70c2a9;
+    }
+    .two {
+      color: #d7b140;
+    }
+    .three {
+      color: #d78a54;
+    }
+    .four {
+      color: #d77578;
+    }
+  }
 `;
 
 const Matematika = () => {
@@ -78,6 +95,12 @@ const Matematika = () => {
         </div>
       </div>
       <hr />
+      <div className="blokovi">
+        <Blokovi block={1} spent="122" />
+        <Blokovi block={2} spent="122" />
+        <Blokovi block={3} spent="122" />
+        <Blokovi block={4} spent="122" />
+      </div>
     </StyledComp>
   );
 };
