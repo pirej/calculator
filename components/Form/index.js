@@ -97,15 +97,44 @@ const Form = () => {
   let lastDate = new Date(newDate);
   let difference = lastDate.getTime() - firstDate.getTime();
   let denovi = Math.ceil(difference / (1000 * 3600 * 24));
-  //--------------------------------------------------
+  //------------data from num input-------------------
+  const [oldEvtina, setOldEvtina] = useState('');
+  const [oldSkapa, setOldSkapa] = useState('');
+  const [newEvtina, setNewEvtina] = useState('');
+  const [newSkapa, setNewSkapa] = useState('');
 
+  const oldEvt = data => {
+    setOldEvtina(data);
+  };
+  const newEvt = data => {
+    setNewEvtina(data);
+  };
+  const oldSkp = data => {
+    setOldSkapa(data);
+  };
+  const newSkp = data => {
+    setNewSkapa(data);
+  };
+  //--------------------------------------------------
   return (
     <MyForm>
       <h2>Калкулатор за сметки за струја</h2>
       <hr />
       <div className="sostojba">
-        <Sostojba title="Последна фактура" myDate={1} starDatum={starDatum} />
-        <Sostojba title="Моментална состојба" myDate={2} novDatum={novDatum} />
+        <Sostojba
+          title="Последна фактура"
+          myDate={1}
+          starDatum={starDatum}
+          oldEvt={oldEvt}
+          oldSkp={oldSkp}
+        />
+        <Sostojba
+          title="Моментална состојба"
+          myDate={2}
+          novDatum={novDatum}
+          newEvt={newEvt}
+          newSkp={newSkp}
+        />
       </div>
       <hr />
       <Matematika days={denovi} />

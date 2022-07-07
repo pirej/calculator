@@ -138,7 +138,17 @@ const Stanje = styled.div`
   }
 `;
 
-const Sostojba = ({ title, myDate, starDatum, novDatum }) => {
+const Sostojba = ({
+  title,
+  myDate,
+  starDatum,
+  novDatum,
+  oldEvt,
+  newEvt,
+  oldSkp,
+  newSkp,
+}) => {
+  //----------data from date picker-------------------
   const manageOldDate = e => {
     starDatum(e.target.value);
   };
@@ -146,6 +156,20 @@ const Sostojba = ({ title, myDate, starDatum, novDatum }) => {
   const manageNewDate = e => {
     novDatum(e.target.value);
   };
+  //------------data from num input-------------------
+  const manageOldEvt = e => {
+    oldEvt(e.target.value);
+  };
+  const manageNewEvt = e => {
+    newEvt(e.target.value);
+  };
+  const manageOldSkp = e => {
+    oldSkp(e.target.value);
+  };
+  const manageNewSkp = e => {
+    newSkp(e.target.value);
+  };
+  //--------------------------------------------------
 
   return (
     <Stanje>
@@ -163,13 +187,23 @@ const Sostojba = ({ title, myDate, starDatum, novDatum }) => {
         <div className="kwh">
           <p>
             <label className="evt">Евтина kw/h</label>
-            <input type="number" name="evtina" required />
+            <input
+              type="number"
+              name="evtina"
+              required
+              onChange={e => (myDate === 1 ? manageOldEvt(e) : manageNewEvt(e))}
+            />
           </p>
         </div>
         <div className="kwh">
           <p>
             <label className="skp">Скапа kw/h</label>
-            <input type="number" name="skapa" required />
+            <input
+              type="number"
+              name="skapa"
+              required
+              onChange={e => (myDate === 1 ? manageOldSkp(e) : manageNewSkp(e))}
+            />
           </p>
         </div>
       </div>
