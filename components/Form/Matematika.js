@@ -75,6 +75,7 @@ const StyledComp = styled.div`
       @media (max-width: 1600px) {
         width: 30%;
       }
+
       .topP {
         margin-bottom: 0;
         font-weight: 600;
@@ -112,7 +113,9 @@ const StyledComp = styled.div`
     @media (max-width: 400px) {
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15%;
+      gap: 23%;
+      margin-left: 2rem;
+      margin-right: 2rem;
     }
     .one {
       color: #39bd96;
