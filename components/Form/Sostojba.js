@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 const Stanje = styled.div`
   width: 45%;
+  @media (max-width: 480px) {
+    width: 80%;
+  }
   h3 {
     font-size: 1.4rem;
     margin-top: 0rem;
@@ -12,6 +15,9 @@ const Stanje = styled.div`
     }
     @media (max-width: 1400px) {
       font-size: 1.2rem;
+    }
+    @media (max-width: 480px) {
+      font-size: 1.3rem;
     }
   }
   .oneField {
@@ -34,6 +40,9 @@ const Stanje = styled.div`
     }
     @media (max-width: 1400px) {
       font-size: 1.05rem;
+    }
+    @media (max-width: 480px) {
+      font-size: 1.2rem;
     }
     margin-top: 0;
 
@@ -63,6 +72,9 @@ const Stanje = styled.div`
       border: solid 1px #1f3947;
       letter-spacing: 0.04rem;
       font-size: 1rem;
+      @media (max-width: 480px) {
+        width: 50%;
+      }
 
       :focus {
         outline: none !important;
@@ -82,6 +94,9 @@ const Stanje = styled.div`
       display: flex;
       flex-direction: column;
       width: 45%;
+      @media (max-width: 480px) {
+        width: 50%;
+      }
 
       input {
         width: 100%;

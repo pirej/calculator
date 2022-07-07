@@ -25,6 +25,9 @@ const MyForm = styled.div`
   @media (max-width: 640px) {
     width: 95w;
   }
+  @media (max-width: 360px) {
+    width: 100w;
+  }
 
   h2 {
     margin: 0;
@@ -37,13 +40,20 @@ const MyForm = styled.div`
     @media (max-width: 1400px) {
       font-size: 1.3rem;
     }
-    /* @media (max-width: 1440px) {
+    @media (max-width: 480px) {
       font-size: 1.3rem;
-    } */
+    }
+    @media (max-width: 360px) {
+      padding: 1rem 2rem 0.9rem 2rem;
+    }
   }
   .sostojba {
     display: flex;
     justify-content: space-evenly;
+    @media (max-width: 480px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   hr {
     border: 0;

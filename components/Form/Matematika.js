@@ -19,12 +19,18 @@ const StyledComp = styled.div`
       margin-top: 0.5rem;
       margin-bottom: 0.2rem;
     }
+    @media (max-width: 480px) {
+      font-size: 1.3rem;
+    }
   }
   p {
     font-size: 1.2rem;
     margin-top: 0;
     @media (max-width: 1600px) {
       font-size: 1.1rem;
+    }
+    @media (max-width: 480px) {
+      font-size: 1.2rem;
     }
   }
   .btn {
@@ -47,6 +53,9 @@ const StyledComp = styled.div`
       }
       @media (max-width: 1400px) {
         font-size: 1.05rem;
+      }
+      @media (max-width: 480px) {
+        font-size: 1.2rem;
       }
       :hover {
         background-color: #29a680;
@@ -115,7 +124,7 @@ const StyledComp = styled.div`
   }
   .total {
     p {
-      font-weight: 500;
+      font-weight: 600;
       margin-bottom: 0.2rem;
     }
     .cheap {
