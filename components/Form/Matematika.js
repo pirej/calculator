@@ -169,14 +169,14 @@ const StyledComp = styled.div`
   }
 `;
 
-const Matematika = () => {
+const Matematika = ({ days }) => {
   return (
     <StyledComp>
       <div className="btn">
         <button>Пресметај</button>
       </div>
       <h3>
-        Потрошено за <span>26</span> дена
+        Потрошено за <span>{days ? days : 0}</span> дена
       </h3>
       <div className="potrosuvacka">
         <div className="kwh">

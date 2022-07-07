@@ -95,6 +95,13 @@ const Form = () => {
     setNewDate(data);
   };
 
+  //-----------------------------
+  let firstDate = new Date(oldDate);
+  let lastDate = new Date(newDate);
+  let difference = lastDate.getTime() - firstDate.getTime();
+  let denovi = Math.ceil(difference / (1000 * 3600 * 24));
+  //-----------------------------
+
   return (
     <MyForm>
       <h2>Калкулатор за сметки за струја</h2>
@@ -104,7 +111,7 @@ const Form = () => {
         <Sostojba title="Моментална состојба" myDate={2} novDatum={novDatum} />
       </div>
       <hr />
-      <Matematika />
+      <Matematika days={denovi} />
     </MyForm>
   );
 };
