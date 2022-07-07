@@ -16,6 +16,15 @@ const MyForm = styled.div`
   @media (max-width: 1200px) {
     width: 55vw;
   }
+  @media (max-width: 900px) {
+    width: 80vw;
+  }
+  @media (max-width: 768px) {
+    width: 85vw;
+  }
+  @media (max-width: 640px) {
+    width: 95w;
+  }
 
   h2 {
     margin: 0;
