@@ -109,11 +109,22 @@ const StyledComp = styled.div`
   .blokovi {
     display: flex;
     justify-content: space-evenly;
+    @media (max-width: 360px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15%;
+    }
     .one {
       color: #39bd96;
+      @media (max-width: 360px) {
+        margin-bottom: 0.5rem;
+      }
     }
     .two {
       color: #d7b140;
+      @media (max-width: 360px) {
+        margin-bottom: 0.5rem;
+      }
     }
     .three {
       color: #d78a54;
