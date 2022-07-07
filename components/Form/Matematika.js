@@ -33,36 +33,53 @@ const StyledComp = styled.div`
       font-size: 1.2rem;
     }
   }
-  .btn {
-    margin-top: 1.5rem;
-    @media (max-width: 1400px) {
-      margin-top: 1rem;
-    }
-    button {
-      background-color: #39bd96;
-      color: #354c59;
-      padding: 0.3rem 1rem;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      letter-spacing: 0.04rem;
-      font-weight: bolder;
-      @media (max-width: 1600px) {
-        font-size: 1.1rem;
-      }
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    .btn {
+      margin-top: 1.5rem;
       @media (max-width: 1400px) {
-        font-size: 1.05rem;
+        margin-top: 1rem;
       }
-      @media (max-width: 480px) {
+      button {
+        background-color: #39bd96;
+        color: #354c59;
+        padding: 0.3rem 1rem;
         font-size: 1.2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        letter-spacing: 0.04rem;
+        font-weight: bolder;
+        @media (max-width: 1600px) {
+          font-size: 1.1rem;
+        }
+        @media (max-width: 1400px) {
+          font-size: 1.05rem;
+        }
+        @media (max-width: 480px) {
+          font-size: 1.2rem;
+        }
+        :hover {
+          background-color: #29a680;
+        }
+        box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.5);
+        -webkit-box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.5);
+        -moz-box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.5);
       }
-      :hover {
-        background-color: #29a680;
+    }
+    .clear {
+      button {
+        background-color: #d77578;
+        :hover {
+          background-color: #e55c61;
+        }
+        box-shadow: 0px 4px 7px -2px rgba(191, 61, 66, 0.5);
+        -webkit-box-shadow: 0px 4px 7px -2px rgba(191, 61, 66, 0.5);
+        -moz-box-shadow: 0px 4px 7px -2px rgba(191, 61, 66, 0.5);
       }
-      box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.9);
-      -webkit-box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.9);
-      -moz-box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.9);
     }
   }
   .potrosuvacka {
@@ -172,8 +189,13 @@ const StyledComp = styled.div`
 const Matematika = ({ days, evtinaStruja, skapaStruja }) => {
   return (
     <StyledComp>
-      <div className="btn">
-        <button>Пресметај</button>
+      <div className="buttons">
+        <div className="btn">
+          <button>Пресметај</button>
+        </div>
+        <div className="btn clear">
+          <button>Бриши</button>
+        </div>
       </div>
       <h3>
         Потрошено за <span>{days ? days : 0}</span> дена
