@@ -123,6 +123,19 @@ const Stanje = styled.div`
       }
     }
   }
+
+  /* Remove Arrows/Spinners */
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
 `;
 
 const Sostojba = ({ title, myDate, starDatum, novDatum }) => {
@@ -150,13 +163,13 @@ const Sostojba = ({ title, myDate, starDatum, novDatum }) => {
         <div className="kwh">
           <p>
             <label className="evt">Евтина kw/h</label>
-            <input type="text" name="evtina" required />
+            <input type="number" name="evtina" required />
           </p>
         </div>
         <div className="kwh">
           <p>
             <label className="skp">Скапа kw/h</label>
-            <input type="text" name="skapa" required />
+            <input type="number" name="skapa" required />
           </p>
         </div>
       </div>

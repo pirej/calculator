@@ -82,11 +82,9 @@ const MyForm = styled.div`
 `;
 
 const Form = () => {
+  //----------data from date picker-------------------
   const [oldDate, setOldDate] = useState('');
   const [newDate, setNewDate] = useState('');
-
-  console.log('stara data', oldDate);
-  console.log('nova data', newDate);
 
   const starDatum = data => {
     setOldDate(data);
@@ -95,12 +93,11 @@ const Form = () => {
     setNewDate(data);
   };
 
-  //-----------------------------
   let firstDate = new Date(oldDate);
   let lastDate = new Date(newDate);
   let difference = lastDate.getTime() - firstDate.getTime();
   let denovi = Math.ceil(difference / (1000 * 3600 * 24));
-  //-----------------------------
+  //--------------------------------------------------
 
   return (
     <MyForm>
