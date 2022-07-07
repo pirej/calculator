@@ -109,7 +109,7 @@ const StyledComp = styled.div`
   .blokovi {
     display: flex;
     justify-content: space-evenly;
-    @media (max-width: 360px) {
+    @media (max-width: 400px) {
       flex-wrap: wrap;
       justify-content: center;
       gap: 15%;

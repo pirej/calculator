@@ -10,11 +10,20 @@ const MyForm = styled.div`
   margin: -20rem auto 0 auto;
   border-radius: 15px;
   text-align: center;
-  @media (max-width: 1600px) {
-    height: 108vh;
+  @media (max-width: 1920px) {
+    width: 40vw;
+    height: 99vh;
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1600px) {
+    width: 45vw;
+    height: 91vh;
+  }
+  @media (max-width: 1400px) {
     width: 55vw;
+    height: 80vh;
+  }
+  @media (max-width: 1024px) {
+    width: 65vw;
   }
   @media (max-width: 900px) {
     width: 80vw;
@@ -25,8 +34,12 @@ const MyForm = styled.div`
   @media (max-width: 640px) {
     width: 95w;
   }
-  @media (max-width: 360px) {
+  @media (max-width: 480px) {
+    height: 105vh;
+  }
+  @media (max-width: 400px) {
     width: 100w;
+    height: 120vh;
   }
 
   h2 {
@@ -43,7 +56,7 @@ const MyForm = styled.div`
     @media (max-width: 480px) {
       font-size: 1.3rem;
     }
-    @media (max-width: 360px) {
+    @media (max-width: 400px) {
       padding: 1rem 2rem 0.9rem 2rem;
     }
   }
