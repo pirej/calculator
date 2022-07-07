@@ -115,6 +115,9 @@ const Form = () => {
   const newSkp = data => {
     setNewSkapa(data);
   };
+  //-------- kalk skapa i evtina -------
+  const evtinaStruja = newEvtina - oldEvtina;
+  const skapaStruja = newSkapa - oldSkapa;
   //--------------------------------------------------
   return (
     <MyForm>
@@ -137,7 +140,11 @@ const Form = () => {
         />
       </div>
       <hr />
-      <Matematika days={denovi} />
+      <Matematika
+        days={denovi}
+        evtinaStruja={evtinaStruja}
+        skapaStruja={skapaStruja}
+      />
     </MyForm>
   );
 };

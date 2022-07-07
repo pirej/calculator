@@ -169,7 +169,7 @@ const StyledComp = styled.div`
   }
 `;
 
-const Matematika = ({ days }) => {
+const Matematika = ({ days, evtinaStruja, skapaStruja }) => {
   return (
     <StyledComp>
       <div className="btn">
@@ -181,11 +181,11 @@ const Matematika = ({ days }) => {
       <div className="potrosuvacka">
         <div className="kwh">
           <p className="topP evt">Евтина</p>
-          <p className="botP ">356565 kw/h</p>
+          <p className="botP ">{evtinaStruja} kw/h</p>
         </div>
         <div className="kwh">
           <p className="topP skp">Скапа</p>
-          <p className="botP ">356565 kw/h</p>
+          <p className="botP ">{skapaStruja} kw/h</p>
         </div>
       </div>
       <hr className="hrr" />
