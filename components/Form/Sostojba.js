@@ -125,13 +125,26 @@ const Stanje = styled.div`
   }
 `;
 
-const Sostojba = ({ title }) => {
+const Sostojba = ({ title, myDate, starDatum, novDatum }) => {
+  const manageOldDate = e => {
+    starDatum(e.target.value);
+  };
+
+  const manageNewDate = e => {
+    novDatum(e.target.value);
+  };
+
   return (
     <Stanje>
       <h3>{title}</h3>
       <p className="oneField">
         <label>Датум на читање</label>
-        <input type="date" name="date" required />
+        <input
+          type="date"
+          name="date"
+          required
+          onChange={e => (myDate === 1 ? manageOldDate(e) : manageNewDate(e))}
+        />
       </p>
       <div className="potrosuvacka">
         <div className="kwh">

@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import Matematika from './Matematika';
 import Sostojba from './Sostojba';
@@ -82,13 +82,26 @@ const MyForm = styled.div`
 `;
 
 const Form = () => {
+  const [oldDate, setOldDate] = useState('');
+  const [newDate, setNewDate] = useState('');
+
+  console.log('stara data', oldDate);
+  console.log('nova data', newDate);
+
+  const starDatum = data => {
+    setOldDate(data);
+  };
+  const novDatum = data => {
+    setNewDate(data);
+  };
+
   return (
     <MyForm>
       <h2>Калкулатор за сметки за струја</h2>
       <hr />
       <div className="sostojba">
-        <Sostojba title="Последна фактура" />
-        <Sostojba title="Моментална состојба" />
+        <Sostojba title="Последна фактура" myDate={1} starDatum={starDatum} />
+        <Sostojba title="Моментална состојба" myDate={2} novDatum={novDatum} />
       </div>
       <hr />
       <Matematika />
