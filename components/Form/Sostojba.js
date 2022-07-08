@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const Stanje = styled.div`
@@ -147,6 +147,7 @@ const Sostojba = ({
   newEvt,
   oldSkp,
   newSkp,
+  clearBillData,
 }) => {
   //----------data from date picker-------------------
   const manageOldDate = e => {
@@ -156,6 +157,7 @@ const Sostojba = ({
   const manageNewDate = e => {
     novDatum(e.target.value);
   };
+
   //------------data from num input-------------------
   const manageOldEvt = e => {
     oldEvt(e.target.value);
@@ -169,42 +171,65 @@ const Sostojba = ({
   const manageNewSkp = e => {
     newSkp(e.target.value);
   };
+  //--------------------clear data--------------------
+  const formRef = useRef();
+  const formRef2 = useRef();
+  const formRef3 = useRef();
+
+  useEffect(() => {
+    if (clearBillData) {
+      formRef.current.reset();
+      formRef2.current.reset();
+      formRef3.current.reset();
+    }
+  }, [clearBillData]);
   //--------------------------------------------------
 
   return (
     <Stanje>
       <h3>{title}</h3>
-      <p className="oneField">
-        <label>Датум на читање</label>
-        <input
-          type="date"
-          name="date"
-          required
-          onChange={e => (myDate === 1 ? manageOldDate(e) : manageNewDate(e))}
-        />
-      </p>
+      <form ref={formRef}>
+        <p className="oneField">
+          <label>Датум на читање</label>
+          <input
+            type="date"
+            name="date"
+            required
+            onChange={e => (myDate === 1 ? manageOldDate(e) : manageNewDate(e))}
+          />
+        </p>
+      </form>
       <div className="potrosuvacka">
         <div className="kwh">
-          <p>
-            <label className="evt">Евтина kw/h</label>
-            <input
-              type="number"
-              name="evtina"
-              required
-              onChange={e => (myDate === 1 ? manageOldEvt(e) : manageNewEvt(e))}
-            />
-          </p>
+          <form ref={formRef2}>
+            <p>
+              <label className="evt">Евтина kw/h</label>
+              <input
+                type="number"
+                name="evtina"
+                required
+                onChange={e =>
+                  myDate === 1 ? manageOldEvt(e) : manageNewEvt(e)
+                }
+              />
+            </p>
+          </form>
         </div>
+
         <div className="kwh">
-          <p>
-            <label className="skp">Скапа kw/h</label>
-            <input
-              type="number"
-              name="skapa"
-              required
-              onChange={e => (myDate === 1 ? manageOldSkp(e) : manageNewSkp(e))}
-            />
-          </p>
+          <form ref={formRef3}>
+            <p>
+              <label className="skp">Скапа kw/h</label>
+              <input
+                type="number"
+                name="skapa"
+                required
+                onChange={e =>
+                  myDate === 1 ? manageOldSkp(e) : manageNewSkp(e)
+                }
+              />
+            </p>
+          </form>
         </div>
       </div>
     </Stanje>

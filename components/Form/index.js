@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Matematika from './Matematika';
 import Sostojba from './Sostojba';
@@ -118,6 +118,24 @@ const Form = () => {
   //-------- kalk skapa i evtina -------
   const evtinaStruja = newEvtina - oldEvtina;
   const skapaStruja = newSkapa - oldSkapa;
+  //------------------clear data---------------------
+  const [clearBillData, setClearBillData] = useState(false);
+
+  const clearData = () => {
+    setClearBillData(true);
+  };
+
+  useEffect(() => {
+    if (clearBillData) {
+      setOldDate('');
+      setNewDate('');
+      setOldEvtina('');
+      setOldSkapa('');
+      setNewEvtina('');
+      setNewSkapa('');
+    }
+    setClearBillData(false);
+  }, [clearBillData]);
   //--------------------------------------------------
   return (
     <MyForm>
@@ -130,6 +148,7 @@ const Form = () => {
           starDatum={starDatum}
           oldEvt={oldEvt}
           oldSkp={oldSkp}
+          clearBillData={clearBillData}
         />
         <Sostojba
           title="Моментална состојба"
@@ -137,6 +156,7 @@ const Form = () => {
           novDatum={novDatum}
           newEvt={newEvt}
           newSkp={newSkp}
+          clearBillData={clearBillData}
         />
       </div>
       <hr />
@@ -144,6 +164,7 @@ const Form = () => {
         days={denovi}
         evtinaStruja={evtinaStruja}
         skapaStruja={skapaStruja}
+        clearData={clearData}
       />
     </MyForm>
   );

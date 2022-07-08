@@ -186,7 +186,11 @@ const StyledComp = styled.div`
   }
 `;
 
-const Matematika = ({ days, evtinaStruja, skapaStruja }) => {
+const Matematika = ({ days, evtinaStruja, skapaStruja, clearData }) => {
+  const clear = () => {
+    clearData(true);
+  };
+
   return (
     <StyledComp>
       <div className="buttons">
@@ -194,7 +198,7 @@ const Matematika = ({ days, evtinaStruja, skapaStruja }) => {
           <button>Пресметај</button>
         </div>
         <div className="btn clear">
-          <button>Бриши</button>
+          <button onClick={() => clear()}>Бриши</button>
         </div>
       </div>
       <h3>
