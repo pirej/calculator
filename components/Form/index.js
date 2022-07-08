@@ -38,8 +38,19 @@ const MyForm = styled.div`
     height: 120vh;
   }
   @media (max-width: 420px) {
-    width: 100w;
-    height: 145vh;
+    height: 115vh;
+  }
+  @media (max-width: 400px) {
+    height: 125vh;
+  }
+  @media (max-width: 375px) {
+    height: 155vh;
+  }
+  @media (max-width: 360px) {
+    height: 140vh;
+  }
+  @media (max-width: 280px) {
+    height: 200vh;
   }
 
   h2 {
