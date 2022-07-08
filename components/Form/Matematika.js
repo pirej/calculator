@@ -210,7 +210,7 @@ const Matematika = ({ days, evtinaStruja, skapaStruja, clearData }) => {
   let block4 = 0;
 
   if (skapaStruja <= 210) {
-    block1 = skapaStruja.toFixed(2);
+    block1 = (skapaStruja - 0).toFixed(2);
   }
   if (skapaStruja > 210 && skapaStruja <= 630) {
     block1 = 210;
