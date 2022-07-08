@@ -14,7 +14,7 @@ const Blocks = styled.div`
   }
 `;
 
-const Blokovi = ({ block, spent }) => {
+const Blokovi = ({ block, spent, kilovati }) => {
   return (
     <Blocks
       className={` ${
@@ -28,7 +28,10 @@ const Blokovi = ({ block, spent }) => {
       }`}
     >
       <h4>BT{block}</h4>
-      <h4>255 kw/h</h4>
+      {block === 1 && <h4>{kilovati} kw/h</h4>}
+      {block === 2 && <h4>{kilovati} kw/h</h4>}
+      {block === 3 && <h4>{kilovati} kw/h</h4>}
+      {block === 4 && <h4>{kilovati} kw/h</h4>}
       <h4>865 ден.</h4>
     </Blocks>
   );

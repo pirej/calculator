@@ -191,12 +191,40 @@ const Matematika = ({ days, evtinaStruja, skapaStruja, clearData }) => {
     clearData(true);
   };
 
+  let block1;
+  let block2;
+  let block3;
+  let block4;
+
+  if (skapaStruja <= 210) {
+    block1 = skapaStruja;
+  }
+  if (skapaStruja > 210 && skapaStruja <= 630) {
+    block1 = 210;
+    block2 = skapaStruja - 210;
+  }
+  if (skapaStruja > 630 && skapaStruja <= 1050) {
+    block1 = 210;
+    block2 = 630;
+    block3 = skapaStruja - 840;
+  }
+  if (skapaStruja > 1050) {
+    block1 = 210;
+    block2 = 630;
+    block3 = 1050;
+    block4 = skapaStruja - 1050;
+  }
+
+  // console.log('block1', block1);
+  // console.log('block2', block2);
+  // console.log('block3', block3);
+  // console.log('block4', block4);
   return (
     <StyledComp>
       <div className="buttons">
-        <div className="btn">
+        {/* <div className="btn">
           <button>Пресметај</button>
-        </div>
+        </div> */}
         <div className="btn clear">
           <button onClick={() => clear()}>Бриши</button>
         </div>
@@ -216,10 +244,10 @@ const Matematika = ({ days, evtinaStruja, skapaStruja, clearData }) => {
       </div>
       <hr className="hrr" />
       <div className="blokovi">
-        <Blokovi block={1} spent="122" />
-        <Blokovi block={2} spent="122" />
-        <Blokovi block={3} spent="122" />
-        <Blokovi block={4} spent="122" />
+        <Blokovi block={1} kilovati={block1} />
+        <Blokovi block={2} kilovati={block2} />
+        <Blokovi block={3} kilovati={block3} />
+        <Blokovi block={4} kilovati={block4} />
       </div>
       <hr className="hrr2" />
       <div className="total">
@@ -236,3 +264,8 @@ const Matematika = ({ days, evtinaStruja, skapaStruja, clearData }) => {
 };
 
 export default Matematika;
+
+// ВТ1 = -> 210 KW/h
+// ВТ2 = 210 - 630
+// ВТ3 = 630 - 1050
+// ВТ4 = 1050 ->
