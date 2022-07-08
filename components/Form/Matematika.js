@@ -127,6 +127,13 @@ const StyledComp = styled.div`
   .blokovi {
     display: flex;
     justify-content: space-evenly;
+    @media (max-width: 420px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15%;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
     @media (max-width: 400px) {
       flex-wrap: wrap;
       justify-content: center;
@@ -225,7 +232,7 @@ const Matematika = ({ days, evtinaStruja, skapaStruja, clearData }) => {
   const skapaSmetka =
     block1 * 8.109 + block2 * 8.48 + block3 * 9.095 + block4 * 18.351;
   const skapaSmetkaFinal = skapaSmetka.toFixed(2);
-  const komunalnaTaksa = 184;
+  const komunalnaTaksa = evtinaSmetka ? 184 : 0;
 
   const vkupnaSmetka = (evtinaSmetka + skapaSmetka + komunalnaTaksa).toFixed(2);
 
@@ -268,7 +275,7 @@ const Matematika = ({ days, evtinaStruja, skapaStruja, clearData }) => {
           Скапа струја <span>{skapaSmetkaFinal}</span> ден.
         </p>
         <p className="taksa">
-          Комунална такса <span>{komunalnaTaksa}</span> ден.
+          Комунална такса <span>{komunalnaTaksa.toFixed(2)}</span> ден.
         </p>
         <hr className="hrr3" />
         <h3 className="vkupno">

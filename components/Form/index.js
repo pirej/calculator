@@ -7,7 +7,8 @@ const MyForm = styled.div`
   background-color: #314b59;
   width: 40vw;
   height: 91vh;
-  margin: -20rem auto 0 auto;
+  /* margin: -20rem auto 0 auto; */
+  margin: -15rem auto 0 auto;
   border-radius: 15px;
   text-align: center;
   @media (max-width: 1920px) {
@@ -37,7 +38,7 @@ const MyForm = styled.div`
   @media (max-width: 480px) {
     height: 120vh;
   }
-  @media (max-width: 400px) {
+  @media (max-width: 420px) {
     width: 100w;
     height: 145vh;
   }
@@ -56,9 +57,12 @@ const MyForm = styled.div`
     @media (max-width: 480px) {
       font-size: 1.3rem;
     }
-    @media (max-width: 400px) {
+    @media (max-width: 420px) {
       padding: 1rem 2rem 0.9rem 2rem;
     }
+    /* @media (max-width: 400px) {
+      padding: 1rem 2rem 0.9rem 2rem;
+    } */
   }
   .sostojba {
     display: flex;
