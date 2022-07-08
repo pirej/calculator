@@ -8,7 +8,7 @@ const StyledComp = styled.div`
     margin-top: 1rem;
     margin-bottom: 1rem;
     span {
-      color: #d77578;
+      color: #e57c7f;
     }
     @media (max-width: 1600px) {
       font-size: 1.3rem;
@@ -72,7 +72,7 @@ const StyledComp = styled.div`
     }
     .clear {
       button {
-        background-color: #d77578;
+        background-color: #e57c7f;
         :hover {
           background-color: #e55c61;
         }
@@ -104,7 +104,7 @@ const StyledComp = styled.div`
         color: #39bd96;
       }
       .skp {
-        color: #d77578;
+        color: #e57c7f;
       }
     }
   }
@@ -150,7 +150,7 @@ const StyledComp = styled.div`
       color: #d78a54;
     }
     .four {
-      color: #d77578;
+      color: #e57c7f;
     }
   }
   .total {
@@ -162,7 +162,7 @@ const StyledComp = styled.div`
       color: #39bd96;
     }
     .skapa {
-      color: #d77578;
+      color: #e57c7f;
     }
     .taksa {
       color: #63abff;
@@ -191,10 +191,10 @@ const Matematika = ({ days, evtinaStruja, skapaStruja, clearData }) => {
     clearData(true);
   };
 
-  let block1;
-  let block2;
-  let block3;
-  let block4;
+  let block1 = 0;
+  let block2 = 0;
+  let block3 = 0;
+  let block4 = 0;
 
   if (skapaStruja <= 210) {
     block1 = skapaStruja;
@@ -206,7 +206,7 @@ const Matematika = ({ days, evtinaStruja, skapaStruja, clearData }) => {
   if (skapaStruja > 630 && skapaStruja <= 1050) {
     block1 = 210;
     block2 = 630;
-    block3 = skapaStruja - 840;
+    block3 = skapaStruja - 630;
   }
   if (skapaStruja > 1050) {
     block1 = 210;
@@ -215,10 +215,20 @@ const Matematika = ({ days, evtinaStruja, skapaStruja, clearData }) => {
     block4 = skapaStruja - 1050;
   }
 
-  // console.log('block1', block1);
-  // console.log('block2', block2);
-  // console.log('block3', block3);
-  // console.log('block4', block4);
+  const spent1 = (block1 * 8.109).toFixed(2);
+  const spent2 = (block2 * 8.48).toFixed(2);
+  const spent3 = (block3 * 9.095).toFixed(2);
+  const spent4 = (block4 * 18.351).toFixed(2);
+
+  const evtinaSmetka = evtinaStruja * 4.193;
+  const evtinaSmetkaFinal = evtinaSmetka.toFixed(2);
+  const skapaSmetka =
+    block1 * 8.109 + block2 * 8.48 + block3 * 9.095 + block4 * 18.351;
+  const skapaSmetkaFinal = skapaSmetka.toFixed(2);
+  const komunalnaTaksa = 184;
+
+  const vkupnaSmetka = (evtinaSmetka + skapaSmetka + komunalnaTaksa).toFixed(2);
+
   return (
     <StyledComp>
       <div className="buttons">
@@ -244,19 +254,25 @@ const Matematika = ({ days, evtinaStruja, skapaStruja, clearData }) => {
       </div>
       <hr className="hrr" />
       <div className="blokovi">
-        <Blokovi block={1} kilovati={block1} />
-        <Blokovi block={2} kilovati={block2} />
-        <Blokovi block={3} kilovati={block3} />
-        <Blokovi block={4} kilovati={block4} />
+        <Blokovi block={1} kilovati={block1} spent={spent1} />
+        <Blokovi block={2} kilovati={block2} spent={spent2} />
+        <Blokovi block={3} kilovati={block3} spent={spent3} />
+        <Blokovi block={4} kilovati={block4} spent={spent4} />
       </div>
       <hr className="hrr2" />
       <div className="total">
-        <p className="cheap">Евтина струја 255 денари</p>
-        <p className="skapa">Скапа струја 255 денари</p>
-        <p className="taksa">Комунална такса 184 денари</p>
+        <p className="cheap">
+          Евтина струја <span>{evtinaSmetkaFinal}</span> ден.
+        </p>
+        <p className="skapa">
+          Скапа струја <span>{skapaSmetkaFinal}</span> ден.
+        </p>
+        <p className="taksa">
+          Комунална такса <span>{komunalnaTaksa}</span> ден.
+        </p>
         <hr className="hrr3" />
         <h3 className="vkupno">
-          Вкупно <span>255 денари</span>
+          <span>Вкупно {vkupnaSmetka} ден.</span>
         </h3>
       </div>
     </StyledComp>

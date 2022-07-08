@@ -118,7 +118,7 @@ const Stanje = styled.div`
         font-weight: 500;
       }
       .skp {
-        color: #d77578;
+        color: #e57c7f;
         font-weight: 500;
       }
     }
