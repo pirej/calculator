@@ -65,20 +65,31 @@ const StyledComp = styled.div`
         :hover {
           background-color: #29a680;
         }
-        box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.5);
+        /* box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.5);
         -webkit-box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.5);
-        -moz-box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.5);
+        -moz-box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.5); */
       }
     }
     .clear {
       button {
-        background-color: #e57c7f;
+        /* background-color: #e57c7f; */
+        background-color: #354c59;
+        background-color: rgba(191, 61, 66, 0.2);
+        color: #b8d5e5;
         :hover {
-          background-color: #e55c61;
+          background-color: #d9575b;
+          color: #ccecff;
         }
-        box-shadow: 0px 4px 7px -2px rgba(191, 61, 66, 0.5);
+
+        border: solid 1px #d9575b;
+        border-radius: 5px;
+        /* width: 16rem; */
+        margin: auto;
+        padding: 0.4rem 1rem 0.3rem 1rem;
+
+        /* box-shadow: 0px 4px 7px -2px rgba(191, 61, 66, 0.5);
         -webkit-box-shadow: 0px 4px 7px -2px rgba(191, 61, 66, 0.5);
-        -moz-box-shadow: 0px 4px 7px -2px rgba(191, 61, 66, 0.5);
+        -moz-box-shadow: 0px 4px 7px -2px rgba(191, 61, 66, 0.5); */
       }
     }
   }
@@ -186,10 +197,12 @@ const StyledComp = styled.div`
   .vkupno {
     /* border: solid 3px #406780; */
     border: solid 1px #39bd96;
-    border-radius: 5px;
-    width: 16rem;
+    /* border-radius: 5px; */
+    /* width: 16rem; */
     margin: auto;
     padding: 0.5rem 1rem 0.7rem 1rem;
+    background-color: rgba(36, 102, 85, 0.3);
+    letter-spacing: 0.05rem;
   }
 `;
 
@@ -278,9 +291,7 @@ const Matematika = ({ days, evtinaStruja, skapaStruja, clearData }) => {
           Комунална такса <span>{komunalnaTaksa.toFixed(2)}</span> ден.
         </p>
         <hr className="hrr3" />
-        <h3 className="vkupno">
-          <span>Вкупно {vkupnaSmetka} ден.</span>
-        </h3>
+        <h3 className="vkupno">Вкупно {vkupnaSmetka} ден.</h3>
       </div>
     </StyledComp>
   );
