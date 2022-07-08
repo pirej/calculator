@@ -7,7 +7,7 @@ const MyForm = styled.div`
   background-color: #314b59;
   width: 40vw;
   height: 91vh;
-  margin: -29.5vh auto 0 auto;
+  margin: -30vh auto 0 auto;
   border-radius: 15px;
   text-align: center;
   @media (max-width: 1920px) {
