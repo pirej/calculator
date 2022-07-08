@@ -210,22 +210,22 @@ const Matematika = ({ days, evtinaStruja, skapaStruja, clearData }) => {
   let block4 = 0;
 
   if (skapaStruja <= 210) {
-    block1 = skapaStruja;
+    block1 = skapaStruja.toFixed(2);
   }
   if (skapaStruja > 210 && skapaStruja <= 630) {
     block1 = 210;
-    block2 = skapaStruja - 210;
+    block2 = (skapaStruja - 210).toFixed(2);
   }
   if (skapaStruja > 630 && skapaStruja <= 1050) {
     block1 = 210;
     block2 = 630;
-    block3 = skapaStruja - 630;
+    block3 = (skapaStruja - 630).toFixed(2);
   }
   if (skapaStruja > 1050) {
     block1 = 210;
     block2 = 630;
     block3 = 1050;
-    block4 = skapaStruja - 1050;
+    block4 = (skapaStruja - 1050).toFixed(2);
   }
 
   const spent1 = (block1 * 8.109).toFixed(2);

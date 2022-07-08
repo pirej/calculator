@@ -130,8 +130,8 @@ const Form = () => {
     setNewSkapa(data);
   };
   //-------- kalk skapa i evtina -------
-  const evtinaStruja = newEvtina - oldEvtina;
-  const skapaStruja = newSkapa - oldSkapa;
+  const evtinaStruja = (newEvtina - oldEvtina).toFixed(2);
+  const skapaStruja = (newSkapa - oldSkapa).toFixed(2);
   //------------------clear data---------------------
   const [clearBillData, setClearBillData] = useState(false);
 
