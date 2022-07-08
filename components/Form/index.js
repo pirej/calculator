@@ -35,11 +35,11 @@ const MyForm = styled.div`
     width: 95w;
   }
   @media (max-width: 480px) {
-    height: 105vh;
+    height: 120vh;
   }
   @media (max-width: 400px) {
     width: 100w;
-    height: 120vh;
+    height: 145vh;
   }
 
   h2 {
