@@ -39,9 +39,9 @@ const StyledComp = styled.div`
     justify-content: center;
     gap: 5px;
     .btn {
-      margin-top: 1.5rem;
+      margin-top: 0.5rem;
       @media (max-width: 1400px) {
-        margin-top: 1rem;
+        margin-top: 0.6rem;
       }
       button {
         background-color: #39bd96;
@@ -65,9 +65,6 @@ const StyledComp = styled.div`
         :hover {
           background-color: #29a680;
         }
-        /* box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.5);
-        -webkit-box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.5);
-        -moz-box-shadow: 0px 4px 7px -2px rgba(36, 102, 85, 0.5); */
       }
     }
     .clear {
@@ -86,10 +83,6 @@ const StyledComp = styled.div`
         /* width: 16rem; */
         margin: auto;
         padding: 0.4rem 1rem 0.3rem 1rem;
-
-        /* box-shadow: 0px 4px 7px -2px rgba(191, 61, 66, 0.5);
-        -webkit-box-shadow: 0px 4px 7px -2px rgba(191, 61, 66, 0.5);
-        -moz-box-shadow: 0px 4px 7px -2px rgba(191, 61, 66, 0.5); */
       }
     }
   }
