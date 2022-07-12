@@ -285,7 +285,7 @@ const Matematika = ({ days, evtinaStruja, skapaStruja, clearData }) => {
       <hr className="hrr2" />
       <div className="total">
         <p className="cheap">
-          {lang === 'makedonski' ? 'Евтина Струја' : 'Low tariff '}
+          {lang === 'makedonski' ? 'Евтина Струја' : 'Low tariff '}{' '}
           <span>{evtinaSmetkaFinal}</span>{' '}
           {lang === 'makedonski' ? 'ден.' : 'den.'}
         </p>
