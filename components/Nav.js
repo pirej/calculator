@@ -9,7 +9,8 @@ const MyNav = styled.div`
   .navLinks {
     padding-top: 1.5rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20%;
 
     .langWrap {
       display: flex;
