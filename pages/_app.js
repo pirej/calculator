@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import Script from 'next/script';
 import Router from 'next/router';
+import { LanguageProvider } from '../state/langContext';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -19,8 +20,9 @@ function MyApp({ Component, pageProps }) {
                     });
                 `}
       </Script>
-
-      <Component {...pageProps} />
+      <LanguageProvider>
+        <Component {...pageProps} />
+      </LanguageProvider>
     </>
   );
 }

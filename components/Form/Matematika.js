@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useLanguageContext } from '../../state/langContext';
 import Blokovi from '../Blokovi';
 
 const StyledComp = styled.div`
@@ -200,6 +201,7 @@ const StyledComp = styled.div`
 `;
 
 const Matematika = ({ days, evtinaStruja, skapaStruja, clearData }) => {
+  const { lang, jazik } = useLanguageContext();
   const clear = () => {
     clearData(true);
   };
@@ -249,19 +251,27 @@ const Matematika = ({ days, evtinaStruja, skapaStruja, clearData }) => {
           <button>Пресметај</button>
         </div> */}
         <div className="btn clear">
-          <button onClick={() => clear()}>Бриши</button>
+          <button onClick={() => clear()}>
+            {lang === 'makedonski' ? 'Бриши' : 'Clear'}
+          </button>
         </div>
       </div>
-      <h3>
-        Потрошено за <span>{days ? days : 0}</span> дена
-      </h3>
+      {lang === 'makedonski' ? (
+        <h3>
+          Потрошено за <span>{days ? days : 0}</span> дена
+        </h3>
+      ) : (
+        <h3>
+          Spent in <span>{days ? days : 0}</span> days
+        </h3>
+      )}
       <div className="potrosuvacka">
         <div className="kwh">
-          <p className="topP evt">Евтина</p>
+          <p className="topP evt">{lang === 'makedonski' ? 'Евтина' : 'Low'}</p>
           <p className="botP ">{evtinaStruja} kw/h</p>
         </div>
         <div className="kwh">
-          <p className="topP skp">Скапа</p>
+          <p className="topP skp">{lang === 'makedonski' ? 'Скапа' : 'High'}</p>
           <p className="botP ">{skapaStruja} kw/h</p>
         </div>
       </div>
@@ -275,16 +285,25 @@ const Matematika = ({ days, evtinaStruja, skapaStruja, clearData }) => {
       <hr className="hrr2" />
       <div className="total">
         <p className="cheap">
-          Евтина струја <span>{evtinaSmetkaFinal}</span> ден.
+          {lang === 'makedonski' ? 'Евтина Струја' : 'Low tariff '}
+          <span>{evtinaSmetkaFinal}</span>{' '}
+          {lang === 'makedonski' ? 'ден.' : 'den.'}
         </p>
         <p className="skapa">
-          Скапа струја <span>{skapaSmetkaFinal}</span> ден.
+          {lang === 'makedonski' ? 'Скапа Струја' : 'High tariff '}{' '}
+          <span>{skapaSmetkaFinal}</span>{' '}
+          {lang === 'makedonski' ? 'ден.' : 'den.'}
         </p>
         <p className="taksa">
-          Комунална такса <span>{komunalnaTaksa.toFixed(2)}</span> ден.
+          {lang === 'makedonski' ? 'Комунална такса' : 'Communal tax '}{' '}
+          <span>{komunalnaTaksa.toFixed(2)}</span>{' '}
+          {lang === 'makedonski' ? 'ден.' : 'den.'}
         </p>
         <hr className="hrr3" />
-        <h3 className="vkupno">Вкупно {vkupnaSmetka} ден.</h3>
+        <h3 className="vkupno">
+          {lang === 'makedonski' ? 'Вкупно' : 'Total '} {vkupnaSmetka}{' '}
+          {lang === 'makedonski' ? 'ден.' : 'den.'}
+        </h3>
       </div>
     </StyledComp>
   );

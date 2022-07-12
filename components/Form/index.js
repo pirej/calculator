@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { useLanguageContext } from '../../state/langContext';
 import Matematika from './Matematika';
 import Sostojba from './Sostojba';
 
@@ -96,6 +97,7 @@ const MyForm = styled.div`
 `;
 
 const Form = () => {
+  const { lang, jazik } = useLanguageContext();
   //----------data from date picker-------------------
   const [oldDate, setOldDate] = useState('');
   const [newDate, setNewDate] = useState('');
@@ -153,11 +155,15 @@ const Form = () => {
   //--------------------------------------------------
   return (
     <MyForm>
-      <h2>Калкулатор за сметки за струја</h2>
+      {lang === 'makedonski' ? (
+        <h2>Калкулатор за сметки за струја</h2>
+      ) : (
+        <h2>Electricity bill calculator</h2>
+      )}
       <hr />
       <div className="sostojba">
         <Sostojba
-          title="Последна фактура"
+          title={lang === 'makedonski' ? 'Последна фактура' : 'Last invoice'}
           myDate={1}
           starDatum={starDatum}
           oldEvt={oldEvt}
@@ -165,7 +171,9 @@ const Form = () => {
           clearBillData={clearBillData}
         />
         <Sostojba
-          title="Моментална состојба"
+          title={
+            lang === 'makedonski' ? 'Моментална состојба' : 'Current state'
+          }
           myDate={2}
           novDatum={novDatum}
           newEvt={newEvt}

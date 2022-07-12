@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import { useLanguageContext } from '../../state/langContext';
 
 const Stanje = styled.div`
   width: 45%;
@@ -149,6 +150,7 @@ const Sostojba = ({
   newSkp,
   clearBillData,
 }) => {
+  const { lang, jazik } = useLanguageContext();
   //----------data from date picker-------------------
   const manageOldDate = e => {
     starDatum(e.target.value);
@@ -190,7 +192,11 @@ const Sostojba = ({
       <h3>{title}</h3>
       <form ref={formRef}>
         <p className="oneField">
-          <label>Датум на читање</label>
+          <label>
+            {lang === 'makedonski'
+              ? 'Датум на читање'
+              : 'Date of state reading'}
+          </label>
           <input
             type="date"
             name="date"
@@ -203,7 +209,9 @@ const Sostojba = ({
         <div className="kwh">
           <form ref={formRef2}>
             <p>
-              <label className="evt">Евтина kw/h</label>
+              <label className="evt">
+                {lang === 'makedonski' ? 'Евтина' : 'Low'} kw/h
+              </label>
               <input
                 type="number"
                 name="evtina"
@@ -219,7 +227,9 @@ const Sostojba = ({
         <div className="kwh">
           <form ref={formRef3}>
             <p>
-              <label className="skp">Скапа kw/h</label>
+              <label className="skp">
+                {lang === 'makedonski' ? 'Скапа' : 'High'} kw/h
+              </label>
               <input
                 type="number"
                 name="skapa"

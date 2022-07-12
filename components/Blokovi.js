@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useLanguageContext } from '../state/langContext';
 
 const Blocks = styled.div`
   h4 {
@@ -15,6 +16,7 @@ const Blocks = styled.div`
 `;
 
 const Blokovi = ({ block, spent, kilovati }) => {
+  const { lang, jazik } = useLanguageContext();
   return (
     <Blocks
       className={` ${
@@ -27,15 +29,34 @@ const Blokovi = ({ block, spent, kilovati }) => {
           : 'four'
       }`}
     >
-      <h4>BT{block}</h4>
+      <h4>
+        {lang === 'makedonski' ? 'ВТ' : 'HighT'}
+        {block}
+      </h4>
       {block === 1 && <h4>{kilovati} kw/h</h4>}
       {block === 2 && <h4>{kilovati} kw/h</h4>}
       {block === 3 && <h4>{kilovati} kw/h</h4>}
       {block === 4 && <h4>{kilovati} kw/h</h4>}
-      {block === 1 && <h4>{spent} ден.</h4>}
-      {block === 2 && <h4>{spent} ден.</h4>}
-      {block === 3 && <h4>{spent} ден.</h4>}
-      {block === 4 && <h4>{spent} ден.</h4>}
+      {block === 1 && (
+        <h4>
+          {spent} {lang === 'makedonski' ? 'ден.' : 'den.'}
+        </h4>
+      )}
+      {block === 2 && (
+        <h4>
+          {spent} {lang === 'makedonski' ? 'ден.' : 'den.'}
+        </h4>
+      )}
+      {block === 3 && (
+        <h4>
+          {spent} {lang === 'makedonski' ? 'ден.' : 'den.'}
+        </h4>
+      )}
+      {block === 4 && (
+        <h4>
+          {spent} {lang === 'makedonski' ? 'ден.' : 'den.'}
+        </h4>
+      )}
     </Blocks>
   );
 };
