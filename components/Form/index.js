@@ -13,15 +13,15 @@ const MyForm = styled.div`
   text-align: center;
   @media (max-width: 1920px) {
     width: 40vw;
-    height: 100vh;
+    height: 105vh;
   }
   @media (max-width: 1600px) {
     width: 45vw;
-    height: 91vh;
+    height: 95vh;
   }
   @media (max-width: 1400px) {
     width: 55vw;
-    height: 80vh;
+    height: 85vh;
   }
   @media (max-width: 1024px) {
     width: 65vw;
