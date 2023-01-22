@@ -230,15 +230,35 @@ const Matematika = ({ days, evtinaStruja, skapaStruja, clearData }) => {
     block4 = (skapaStruja - 1050).toFixed(2);
   }
 
-  const spent1 = (block1 * 8.109).toFixed(2);
-  const spent2 = (block2 * 8.48).toFixed(2);
-  const spent3 = (block3 * 9.095).toFixed(2);
-  const spent4 = (block4 * 18.351).toFixed(2);
 
-  const evtinaSmetka = evtinaStruja * 4.193;
+// ------------------
+  // Ceni po KW od 1.1.2023
+// blok1:  4.7257  + 2.6795 + 5%ddv = 7.77546
+// blok2:  5.1578  + 2.6795 + 5%ddv = 8.22916
+// blok3:  6.0563  + 2.6795 + 5%ddv = 9.17259 
+// blok4:  16.1336	+ 2.6795 + 5%ddv = 19.753755
+// evtina: 1.3183  + 2.6795 + 5%ddv = 4.19769
+// mreza:  2.6795/kw        + 5%ddv = 2.813475
+// komunalna taksa: 184/smetka
+
+const spent1 = (block1 * 7.775).toFixed(2);
+const spent2 = (block2 * 8.229).toFixed(2);
+const spent3 = (block3 * 9.173).toFixed(2);
+const spent4 = (block4 * 19.754).toFixed(2);
+
+// stari ceni do 31.12.2022
+// const spent1 = (block1 * 8.109).toFixed(2);
+// const spent2 = (block2 * 8.48).toFixed(2);
+// const spent3 = (block3 * 9.095).toFixed(2);
+// const spent4 = (block4 * 18.351).toFixed(2);
+// evtina: 0.6193 + mreza + 5%ddv -> 4.193
+// mreza: 3.3742/kw +5%ddv -> 3.54291/kw
+// komunalna taksa: 184/smetka
+
+  const evtinaSmetka = evtinaStruja * 4.197;
   const evtinaSmetkaFinal = evtinaSmetka.toFixed(2);
   const skapaSmetka =
-    block1 * 8.109 + block2 * 8.48 + block3 * 9.095 + block4 * 18.351;
+    block1 * 7.775 + block2 * 8.229 + block3 * 9.173 + block4 * 19.754;
   const skapaSmetkaFinal = skapaSmetka.toFixed(2);
   const komunalnaTaksa = evtinaSmetka ? 184 : 0;
 
