@@ -190,21 +190,6 @@ const Sostojba = ({
   return (
     <Stanje>
       <h3>{title}</h3>
-      <form ref={formRef}>
-        <p className="oneField">
-          <label>
-            {lang === 'makedonski'
-              ? 'Датум на читање'
-              : 'Date of state reading'}
-          </label>
-          <input
-            type="date"
-            name="date"
-            required
-            onChange={e => (myDate === 1 ? manageOldDate(e) : manageNewDate(e))}
-          />
-        </p>
-      </form>
       <div className="potrosuvacka">
         <div className="kwh">
           <form ref={formRef2}>
